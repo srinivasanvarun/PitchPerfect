@@ -15,21 +15,14 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     @IBOutlet weak var recordingLabel: UILabel!
     
     func toggleButtons(_ state: Bool){
-        if state{
-            recordingLabel.text="Recording in Progress"
-            recordButton.isEnabled = false
-            stopRecordingButton.isEnabled = true
-        }else{
-            recordButton.isEnabled = true
-            stopRecordingButton.isEnabled = false
-            recordingLabel.text = "Tap to record"
-        }
+            recordingLabel.text = state ? "Recording in Progress" : "Tap to record"
+            recordButton.isEnabled = !state
+            stopRecordingButton.isEnabled = state
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         stopRecordingButton.isEnabled = false
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,9 +30,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
 
     @IBAction func recordAudio(_ sender: AnyObject) {
-//        recordingLabel.text="Recording in Progress"
-//        recordButton.isEnabled = false
-//        stopRecordingButton.isEnabled = true
         toggleButtons(true)
         
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
@@ -60,9 +50,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     @IBOutlet weak var recordButton: UIButton!
     
     @IBAction func stopRecording(_ sender: AnyObject) {
-//        recordButton.isEnabled = true
-//        stopRecordingButton.isEnabled = false
-//        recordingLabel.text = "Tap to record"
         toggleButtons(false)
         audioRecorder.stop()
         let audioSession = AVAudioSession.sharedInstance()

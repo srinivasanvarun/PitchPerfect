@@ -30,13 +30,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c05-Ao-K4A">
-                                <rect key="frame" x="140.5" y="435" width="94" height="20"/>
+                                <rect key="frame" x="140" y="398" width="94" height="20"/>
                                 <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GdY-FT-YvF">
-                                <rect key="frame" x="146" y="549" width="83" height="83"/>
+                                <rect key="frame" x="146" y="419" width="83" height="83"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="83" id="SRu-5D-ULR"/>
                                     <constraint firstAttribute="width" constant="83" id="UAh-DY-Wwr"/>
@@ -51,9 +51,9 @@
                         <constraints>
                             <constraint firstItem="c05-Ao-K4A" firstAttribute="centerX" secondItem="hwb-KZ-AEt" secondAttribute="centerX" id="GGa-aw-blc"/>
                             <constraint firstItem="hwb-KZ-AEt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JFw-Qa-xI5"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GdY-FT-YvF" secondAttribute="bottom" constant="35" id="Uez-vh-nVX"/>
+                            <constraint firstItem="GdY-FT-YvF" firstAttribute="top" secondItem="c05-Ao-K4A" secondAttribute="bottom" constant="1" id="Xma-Oc-daq"/>
                             <constraint firstItem="hwb-KZ-AEt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ZUb-JY-ZWF"/>
-                            <constraint firstItem="c05-Ao-K4A" firstAttribute="top" secondItem="hwb-KZ-AEt" secondAttribute="bottom" constant="24" id="ejy-Eb-xVb"/>
+                            <constraint firstItem="c05-Ao-K4A" firstAttribute="top" secondItem="hwb-KZ-AEt" secondAttribute="bottom" constant="-13" id="ejy-Eb-xVb"/>
                             <constraint firstItem="GdY-FT-YvF" firstAttribute="centerX" secondItem="hwb-KZ-AEt" secondAttribute="centerX" id="nBT-Yo-5Tl"/>
                         </constraints>
                     </view>
